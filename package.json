@@ -6,7 +6,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "commit": "cz"
+    "commit": "cz",
+    "storybook": "turbo storybook"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
