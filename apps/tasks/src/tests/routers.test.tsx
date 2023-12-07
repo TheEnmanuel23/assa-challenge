@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { App } from "../app";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import { routers } from "../routers";
 
@@ -18,7 +17,7 @@ function RouterProvider({ path }: { path: string }) {
 
 describe("validate routes by URL", () => {
   test("should render home page as initial page", () => {
-    render(<App />);
+    render(<RouterProvider path="/" />);
     expect(screen.getByText("Home")).toBeInTheDocument();
   });
 
