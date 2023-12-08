@@ -32,7 +32,7 @@ describe("validate page transition", () => {
 
   test("should render list view after clicking on the List link", async () => {
     const router = createMemoryRouter(routes);
-    render(<RouterProvider router={router} />);
+    renderWithProviders(<RouterProvider router={router} />);
 
     expect(screen.getByRole("heading")).toHaveTextContent("Home");
     const listLink = screen.getByText("List");

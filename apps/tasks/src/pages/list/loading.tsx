@@ -6,7 +6,10 @@ const items = Array.from(Array(10).keys());
 export function LoadingContacts() {
   return (
     <Layout title="List">
-      <ul className="w-full divide-y divide-dashed">
+      <ul
+        className="w-full divide-y divide-dashed"
+        data-testid="contacts-loading"
+      >
         {items.map((item) => (
           <div
             key={`skeleton-${item}`}

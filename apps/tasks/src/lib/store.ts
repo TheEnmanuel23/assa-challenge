@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import { tasksReducer } from "../features/tasks-slice";
-import { contactsReducer } from "../features/list-slice";
+import { contactsReducer } from "../features/contacts-slice";
 
 const rootReducer = combineReducers({
   tasks: tasksReducer,

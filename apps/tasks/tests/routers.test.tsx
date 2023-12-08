@@ -9,7 +9,7 @@ describe("validate routes by URL", () => {
   });
 
   test("should render list page using the /list url", () => {
-    render(<RouterProvider path="/list" />);
+    renderWithProviders(<RouterProvider path="/list" />);
     expect(screen.getByText("List")).toBeInTheDocument();
   });
 

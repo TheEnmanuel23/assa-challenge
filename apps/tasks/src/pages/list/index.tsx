@@ -1,14 +1,17 @@
 import { ListItem } from "./list-item";
 import { Layout } from "../../shared/layout";
-import { fetchContacts } from "../../features/list-slice";
+import { fetchContacts } from "../../features/contacts-slice";
 import { useAppDispatch, useContacts } from "../../lib/hooks";
 import { LoadingContacts } from "./loading";
+import { useEffect } from "react";
 
 function List() {
   const [contacts, loading] = useContacts();
   const dispatch = useAppDispatch();
 
-  dispatch(fetchContacts());
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   if (loading) {
     return <LoadingContacts />;
