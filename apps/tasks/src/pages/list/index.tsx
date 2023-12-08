@@ -1,5 +1,5 @@
-import { ListItem } from "./components/list-item";
-import { Layout } from "./components/layout";
+import { ListItem } from "./list-item";
+import { Layout } from "../../shared/layout";
 
 function List() {
   return (

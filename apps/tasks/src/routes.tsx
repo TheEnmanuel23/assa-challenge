@@ -1,6 +1,6 @@
-import Home from "./home";
-import List from "./list";
-import Tasks from "./tasks";
+import Home from "./pages/home";
+import List from "./pages/list";
+import Tasks from "./pages/tasks";
 
 export const routes = [
   {

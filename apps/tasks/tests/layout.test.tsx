@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
-import { Layout } from "../src/components/layout";
+import { Layout } from "../src/shared/layout";
 import { MemoryRouter } from "react-router-dom";
 
 test("should render layout wrapper", () => {
