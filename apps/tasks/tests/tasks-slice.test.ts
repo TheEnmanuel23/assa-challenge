@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { addTask, tasksReducer } from "../src/feature/tasks-slice";
+import { addTask, tasksReducer } from "../src/features/tasks-slice";
 
 describe("tasksSlice", () => {
   const initialState = { entities: ["task 1", "task 2"] };

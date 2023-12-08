@@ -3,6 +3,7 @@ import { describe, expect, test } from "vitest";
 import { RouterProvider, createMemoryRouter } from "react-router-dom";
 
 import { routes } from "../src/lib/routes";
+import { renderWithProviders } from "../src/lib/test-utils";
 
 describe("should render two links", () => {
   test("should render Tasks link", () => {
@@ -21,7 +22,7 @@ describe("should render two links", () => {
 describe("validate page transition", () => {
   test("should render tasks view after clicking on the Tasks link", async () => {
     const router = createMemoryRouter(routes);
-    render(<RouterProvider router={router} />);
+    renderWithProviders(<RouterProvider router={router} />);
 
     expect(screen.getByRole("heading")).toHaveTextContent("Home");
     const tasksLink = screen.getByText("Tasks");
