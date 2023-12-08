@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../lib/store";
 
 type TaskState = {
   entities: string[];
@@ -18,8 +17,6 @@ const tasksSlice = createSlice({
     },
   },
 });
-
-export const selectTasks = (state: RootState) => state.tasks.entities;
 
 export const tasksReducer = tasksSlice.reducer;
 export const { addTask } = tasksSlice.actions;

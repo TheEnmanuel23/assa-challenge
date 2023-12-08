@@ -1,10 +1,10 @@
 import { Layout } from "../../shared/layout";
-import { useAppSelector } from "../../lib/hooks";
-import { selectTasks } from "../../features/tasks-slice";
+import { useTasks } from "../../lib/hooks";
 import { AddTask } from "./add-tasks";
 
 function Tasks() {
-  const tasks = useAppSelector(selectTasks);
+  const tasks = useTasks();
+
   return (
     <Layout title="Tasks" action={<AddTask />}>
       <ul className="w-full divide-y divide-dashed">

@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import { tasksReducer } from "../features/tasks-slice";
+import { contactsReducer } from "../features/list-slice";
 
 const rootReducer = combineReducers({
   tasks: tasksReducer,
+  contacts: contactsReducer,
 });
 
 export function setupStore(preloadedState?: Partial<RootState>) {
