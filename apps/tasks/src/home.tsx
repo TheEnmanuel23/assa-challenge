@@ -1,17 +1,17 @@
 import { Button } from "@repo/ui";
 import { GoBackButton } from "./components/go-back-button";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
       <div>
         <h1 className="text-xl">Home</h1>
-        <GoBackButton />
         <Button asChild>
-          <a href="/tasks">Tasks</a>
+          <Link to="/tasks">Tasks</Link>
         </Button>
         <Button asChild>
-          <a href="/list">List</a>
+          <Link to="/list">List</Link>
         </Button>
       </div>
     </>
