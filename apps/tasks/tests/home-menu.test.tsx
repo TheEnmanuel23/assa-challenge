@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { RouterProvider, createMemoryRouter } from "react-router-dom";
 
-import { routes } from "../routes";
+import { routes } from "../src/routes";
 
 describe("should render two links", () => {
   test("should render Tasks link", () => {
