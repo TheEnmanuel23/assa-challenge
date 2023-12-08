@@ -1,81 +1,143 @@
-# Turborepo starter
+# ASSA Challenge
 
-This is an official starter Turborepo.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
+  
+  
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+  
+
+This project is a [Monorepo](https://monorepo.tools/) solution, and it uses [Turborepo](https://turbo.build/repo), it includes the following packages/apps:
+
+  
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+  
+
+-  `docs`: a [ReacJS](https://react.dev/) app built with [Storybook](https://storybook.js.org/) , and [Tailwindcss](https://tailwindcss.com/)
+-  `tasks`: a [ReacJS](https://react.dev/) app built with [Vite](https://vitejs.dev/) , and [Tailwindcss](https://tailwindcss.com/)
+
+-  `ui`: A [design system](https://www.invisionapp.com/inside-design/guide-to-design-systems/) that uses [ReactJS](https://react.dev/) to create a component library shared by `front` and others.
+
+-  `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+
+-  `tsconfig`: Used throughout the monorepo
+
+-  `tailwindcss-config`: Reuse tailwindcss configuration.
+
+  
+  
+
+### Stack
+
+- Monorepository with [Turborepo](https://turbo.build/repo).
+
+  
+
+-  [design system](https://www.invisionapp.com/inside-design/guide-to-design-systems/) to create reusable components.
+- [ReactJS](https://react.dev/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Turborepo](https://turbo.build/repo)
+- [Redux-toolkit](https://redux-toolkit.js.org/)
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
+  
+
 ### Utilities
 
-This Turborepo has some additional tools already setup for you:
+  
+
+Some additional tools already setup for you:
+
+  
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
+
 - [ESLint](https://eslint.org/) for code linting
+
 - [Prettier](https://prettier.io) for code formatting
+
+  
 
 ### Build
 
+  
+
 To build all apps and packages, run the following command:
 
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
+  
 
 ```
-cd my-turborepo
-pnpm dev
-```
 
-### Remote Caching
+cd assa-challenge
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+npm install
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+npm run build
 
 ```
-cd my-turborepo
-npx turbo login
+
+  
+
+### Run locally
+
+  
+
+1. Clone the repository
+
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+https://github.com/TheEnmanuel23/assa-challenge.git
 
 ```
-npx turbo link
+  
+
+2. Install dependencies:
+
+```
+cd assa-challenge
+npm install
+npm run dev
+
 ```
 
-## Useful Links
+3. Add environment variables (**Frontend**)
 
-Learn more about the power of Turborepo:
+Rename the  file `.env.example` in the `./apps/tasks` directory, then add these variables to `.env`:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+The endpoint used for this challenge was `"https://6172cfe5110a740017222e2b.mockapi.io/elements"` but sometimes it doesn't work, so in case this doesn't work, I have created a mock api.
+
+To run **MOCK API**, you need to replace the VITE_API value with:
+`"http://localhost:3000/contacts"`
+
+Then, in the root direct run the script:
+`npm run mock-api`
+  
+ 
+
+4. Then in the root directory, run the command again:
+
+```
+
+npm run dev
+
+```
+
+  
+
+That command will run all the apps (docs and tasks)
+
+```
+
+tasks: http:localhost:<random port>
+docs: http://localhost:6006
+```
+6. Run tests:
+You can run `npm run tests` in the root directory or navigate to the `app/tasks` directory then run the same script as before.
+Besides, you could get the coverage report by running:
+`npm run coverage` in the same directory.
+
+
+![Alt text](image.png)
