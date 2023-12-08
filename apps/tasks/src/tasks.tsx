@@ -11,7 +11,7 @@ function Tasks() {
       <Separator className="mt-4" />
       <div className="flex flex-col items-center py-4 gap-6 h-[calc(100%-40px)] ">
         <Button variant="secondary">Add Task</Button>
-        <ScrollArea className="h-full w-full rounded-md border">
+        <ScrollArea className="h-full w-full">
           <ul className="w-full divide-y divide-dashed">
             <li className="px-2 py-4 text-sm">Task element</li>
             <li className="px-2 py-4 text-sm">Task element</li>
