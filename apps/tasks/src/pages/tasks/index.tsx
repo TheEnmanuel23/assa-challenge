@@ -1,7 +1,7 @@
 import { Button } from "@repo/ui";
 import { Layout } from "../../shared/layout";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store";
+import { RootState } from "../../lib/store";
 
 function Tasks() {
   const tasks = useSelector((state: RootState) => state.tasks.entities);
