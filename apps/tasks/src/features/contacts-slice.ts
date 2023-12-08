@@ -14,9 +14,9 @@ type ContactState = {
 export const fetchContacts = createAsyncThunk(
   "contacts/fetch",
   async (): Promise<Contact[]> => {
-    const response = await fetch(
-      "https://6172cfe5110a740017222e2b.mockapi.io/elements"
-    ).then((res) => res.json());
+    const response = await fetch(import.meta.env.VITE_API).then((res) =>
+      res.json()
+    );
 
     return response;
   }

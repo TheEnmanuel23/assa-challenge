@@ -10,7 +10,7 @@ const dummyContacts = [
 ];
 
 export const handlers = [
-  http.get("https://6172cfe5110a740017222e2b.mockapi.io/elements", async () => {
+  http.get(process.env.VITE_API, async () => {
     await delay(150);
     return HttpResponse.json(dummyContacts);
   }),
