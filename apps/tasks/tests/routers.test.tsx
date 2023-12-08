@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
-import { routes } from "../src/routes";
+import { routes } from "../src/lib/routes";
 
 function RouterProvider({ path }: { path: string }) {
   const router = routes.find((item) => item.path === path);
